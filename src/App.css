@@ -42,18 +42,36 @@
 }
 
 .container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
   width: 60%;
-  gap: 6px;
-  padding: 80px 40px;
+  margin: 10vh auto;
+  padding: 20px;
   border-top: 4px solid rgb(254, 188, 231);
   border-left: 4px solid rgb(254, 188, 231);
   border-right: 4px solid rgb(148, 212, 231);
   border-bottom: 4px solid rgb(148, 212, 231);
-  margin: 10vh auto;
   border-radius: 10px;
+}
+
+.input {
+  margin: 10px;
+  padding: 10px;
+  border: 2px solid rgb(190, 190, 190);
+  border-radius: 4px;
+  color: rgb(156, 156, 156);
+  font-weight: 700;
+}
+
+::placeholder {
+  color: rgb(156, 156, 156);
+  font-weight: 700;
+}
+
+.names-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+  padding: 20px 40px;
 }
 
 .fem {
@@ -61,7 +79,7 @@
   border-radius: 5px;
   color: rgb(179, 26, 125);
   padding: 5px;
-  font-size:medium;
+  font-size: medium;
   font-weight: 500;
 }
 
