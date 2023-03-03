@@ -1,4 +1,4 @@
-const Names = ({ babyNames, input, handleClick }) => {
+const Names = ({ babyNames, handleClick }) => {
   return (
     <div className="names-container">
       {babyNames
@@ -9,7 +9,7 @@ const Names = ({ babyNames, input, handleClick }) => {
             ? 1
             : 0
         )
-        .filter((baby) => baby.name.toUpperCase().includes(input.toUpperCase()))
+
         .map((baby) => (
           <p
             key={baby.id}

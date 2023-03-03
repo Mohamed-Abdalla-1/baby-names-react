@@ -1,9 +1,8 @@
-function Search({ value, inputSetter }) {
+function Search({ inputSetter }) {
   return (
     <input
       className="input"
       placeholder="Search for a name..."
-      value={value}
       type="text"
       onInput={(event) => inputSetter(event)}
     />

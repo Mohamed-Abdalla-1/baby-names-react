@@ -6,10 +6,12 @@ import Favourites from "./Favourites";
 import babyNamesData from "./babyNamesData.json";
 
 function App() {
-  const [value, setValue] = useState("");
-
-  function handleInput(e) {
-    setValue(e.target.value);
+  function handleInput(event) {
+    setBabyNames(
+      babyNamesData.filter((baby) =>
+        baby.name.toUpperCase().includes(event.target.value.toUpperCase())
+      )
+    );
   }
 
   const [favourit, setFavourit] = useState([]);
@@ -39,13 +41,14 @@ function App() {
   return (
     <div className="App">
       <div className="container">
-        <Search value={value} inputSetter={handleInput} />
+        <Search inputSetter={handleInput} />
+        <legend>
+          <input type={"radio"} name="a" />
+          <input type={"radio"} name="a" />
+          <input type={"radio"} name="a" />
+        </legend>
         <Favourites favourit={favourit} handleClick={removeFromFavouite} />
-        <Names
-          babyNames={babyNames}
-          input={value}
-          handleClick={addToFavouite}
-        />
+        <Names babyNames={babyNames} handleClick={addToFavouite} />
       </div>
     </div>
   );
